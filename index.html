@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grand Turismo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-shell">
+      <header class="hud">
+        <div class="hud-item">
+          <span class="label">Score</span>
+          <span id="score">0</span>
+        </div>
+        <div class="hud-item">
+          <span class="label">Best</span>
+          <span id="bestScore">0</span>
+        </div>
+        <div class="hud-item">
+          <span class="label">Vitesse</span>
+          <span id="speed">0</span>
+          <small>km/h</small>
+        </div>
+      </header>
+
+      <canvas id="gameCanvas" width="420" height="720" aria-label="Jeu de course Grand Turismo"></canvas>
+
+      <div id="startScreen" class="panel">
+        <h1>Grand Turismo</h1>
+        <p>Évite les voitures, reste sur la route et accumule le plus de points possible.</p>
+        <ul>
+          <li>← → pour bouger</li>
+          <li>clic gauche / droite pour changer de file</li>
+        </ul>
+        <button id="startButton">Démarrer la course</button>
+      </div>
+
+      <div id="gameOver" class="panel hidden">
+        <h2>Crash !</h2>
+        <p>Ton score : <strong id="finalScore">0</strong></p>
+        <button id="restartButton">Rejouer</button>
+      </div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
